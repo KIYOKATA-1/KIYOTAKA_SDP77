@@ -18,4 +18,8 @@ public class Cart {
     public void clearCart() {
         products.clear();
     }
+
+    public void displayCart(){
+
+    }
 }
