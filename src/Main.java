@@ -74,4 +74,7 @@ public class Main {
             }
         }
     }
+    private static Payment choosePaymentMethod(Scanner scanner) {
+
+    }
 }
