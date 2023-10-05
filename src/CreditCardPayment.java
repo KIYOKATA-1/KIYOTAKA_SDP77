@@ -12,3 +12,6 @@ public class CreditCardPayment implements Payment{
             System.out.println("Оплачено " + amount + " с использованием кредитной карты, номер которой заканчивается на " + Name.substring(Name.length() - 4));
         }
     }
+class CashPayment implements Payment {
+
+}
