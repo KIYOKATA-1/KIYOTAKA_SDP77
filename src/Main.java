@@ -5,7 +5,7 @@ public class Main {
         Clothes store = Clothes.getInstance();
         Payment paymentMethod = null;
 
-        while (true){
+        while (true) {
             System.out.println("ZARA");
             System.out.println("1. Добавить товар в корзину");
             System.out.println("2. Посмотреть корзину");
@@ -16,7 +16,7 @@ public class Main {
             System.out.print("Выберите действие: ");
             int choice = scanner.nextInt();
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     System.out.println("Выберите товар для добавления в корзину:");
                     System.out.println("1. Штаны - 20,000tg");
@@ -25,7 +25,7 @@ public class Main {
                     System.out.println("4. Куртка - 119,990tg");
                     System.out.println("5. Назад");
                     int productChoice = scanner.nextInt();
-                    switch (productChoice){
+                    switch (productChoice) {
                         case 1:
                             store.addToCart(new Product("Штаны", 20.000));
                             break;
@@ -33,7 +33,7 @@ public class Main {
                             store.addToCart(new Product("Худи", 25.990));
                             break;
                         case 3:
-                            store.addToCart(new Product("Пальто",86.990));
+                            store.addToCart(new Product("Пальто", 86.990));
                             break;
                         case 4:
                             store.addToCart(new Product("Куртка", 119.990));
@@ -74,7 +74,28 @@ public class Main {
             }
         }
     }
-    private static Payment choosePaymentMethod(Scanner scanner) {
 
+    private static Payment choosePaymentMethod(Scanner scanner) {
+        System.out.println("Выберите метод оплаты:");
+        System.out.println("1. Кредитная карта");
+        System.out.println("2. Наличные");
+
+        int paymentChoice = scanner.nextInt();
+
+        switch (paymentChoice) {
+            case 1:
+                System.out.print("Введите номер кредитной карты: ");
+                String cardNumber = scanner.next();
+                System.out.print("Введите имя владельца карты: ");
+                String cardHolderName = scanner.next();
+                return new CreditCardPayment(cardHolderName, cardNumber);
+
+            case 2:
+                return new CashPayment();
+
+            default:
+                System.out.println("Некорректный выбор. Используется оплата наличными.");
+                return new CashPayment();
+        }
     }
 }
