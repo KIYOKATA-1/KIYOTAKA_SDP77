@@ -6,4 +6,8 @@ public class Clothes {
     private Clothes(){
         cart = new Cart();
     }
+
+    public static Clothes getInstance(){
+
+    }
 }
