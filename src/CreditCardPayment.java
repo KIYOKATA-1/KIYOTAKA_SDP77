@@ -13,5 +13,8 @@ public class CreditCardPayment implements Payment{
         }
     }
 class CashPayment implements Payment {
-
+    @Override
+    public void pay(double amount){
+        System.out.println("Оплачено " + amount + " наличными.");
+    }
 }
