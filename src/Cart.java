@@ -7,7 +7,7 @@ public class Cart {
         this.products = new ArrayList<>();
     }
 
-    public void addProduct(Product product){
+    public void addProduct(Product product) {
         products.add(product);
     }
 
@@ -19,7 +19,14 @@ public class Cart {
         products.clear();
     }
 
-    public void displayCart(){
-
+    public void displayCart() {
+        if (products.isEmpty()) {
+            System.out.println("Корзина пуста.");
+        } else {
+            System.out.println("Товары в корзине:");
+            for (Product product : products) {
+                System.out.println(product.getName() + " - $" + product.getPrice());
+            }
+        }
     }
 }
