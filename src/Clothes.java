@@ -8,6 +8,8 @@ public class Clothes {
     }
 
     public static Clothes getInstance(){
-
+        if(instance == null){
+            instance = new Clothes();
+        }
     }
 }
