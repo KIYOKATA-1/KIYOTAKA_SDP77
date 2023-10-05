@@ -15,6 +15,7 @@ public class Clothes {
     }
 
     public void addToCart(Product product) {
-
+        cart.addProduct(product);
+        System.out.println(product.getName() + " добавлено в корзину.");
     }
     }
