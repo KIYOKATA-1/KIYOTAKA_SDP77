@@ -1,3 +1,3 @@
-public class CreditCardPayment {
+public class CreditCardPayment implements Payment{
 
 }
