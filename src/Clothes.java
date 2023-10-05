@@ -24,5 +24,8 @@ public class Clothes {
 
     public void checkout(Payment paymentMethod) {
         double totalAmount = cart.calculateTotal();
+        if(totalAmount > 0){
+            System.out.println("Общая сумма покупки составляет: tg" + totalAmount);
+        }
     }
     }
