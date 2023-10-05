@@ -13,4 +13,8 @@ public class Clothes {
         }
         return instance;
     }
-}
+
+    public void addToCart(Product product) {
+
+    }
+    }
