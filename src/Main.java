@@ -45,6 +45,32 @@ public class Main {
                             break;
                     }
                     break;
+
+                case 2:
+                    store.showCart();
+                    break;
+
+                case 3:
+                    paymentMethod = choosePaymentMethod(scanner);
+                    break;
+
+                case 4:
+                    if (paymentMethod != null) {
+                        store.checkout(paymentMethod);
+                    } else {
+                        System.out.println("Выберите метод оплаты сначала.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Спасибо за покупки! До свидания!");
+                    scanner.close();
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Некорректный выбор. Пожалуйста, попробуйте еще раз.");
+                    break;
             }
         }
     }
