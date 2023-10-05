@@ -11,5 +11,6 @@ public class Clothes {
         if(instance == null){
             instance = new Clothes();
         }
+        return instance;
     }
 }
