@@ -15,6 +15,37 @@ public class Main {
 
             System.out.print("Выберите действие: ");
             int choice = scanner.nextInt();
+
+            switch (choice){
+                case 1:
+                    System.out.println("Выберите товар для добавления в корзину:");
+                    System.out.println("1. Штаны - 20,000tg");
+                    System.out.println("2. Худи - 25,990tg");
+                    System.out.println("3. Пальто - 86,990tg");
+                    System.out.println("4. Куртка - 119,990tg");
+                    System.out.println("5. Назад");
+                    int productChoice = scanner.nextInt();
+                    switch (productChoice){
+                        case 1:
+                            store.addToCart(new Product("Штаны", 20.000));
+                            break;
+                        case 2:
+                            store.addToCart(new Product("Худи", 25.990));
+                            break;
+                        case 3:
+                            store.addToCart(new Product("Пальто",86.990));
+                            break;
+                        case 4:
+                            store.addToCart(new Product("Куртка", 119.990));
+                            break;
+                        case 5:
+                            break;
+                        default:
+                            System.out.println("НЕТ ТАКОГО");
+                            break;
+                    }
+                    break;
+            }
         }
     }
 }
