@@ -22,4 +22,6 @@ public class Clothes {
         cart.displayCart();
     }
 
+    public void checkout(Payment paymentMethod) {
+    }
     }
