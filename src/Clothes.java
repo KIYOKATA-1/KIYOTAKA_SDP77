@@ -23,5 +23,6 @@ public class Clothes {
     }
 
     public void checkout(Payment paymentMethod) {
+        double totalAmount = cart.calculateTotal();
     }
     }
