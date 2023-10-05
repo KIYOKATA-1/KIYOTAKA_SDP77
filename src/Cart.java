@@ -11,5 +11,7 @@ public class Cart {
         products.add(product);
     }
 
-
+    public double calculateTotal() {
+        return products.stream().mapToDouble(Product::getPrice).sum();
+    }
 }
