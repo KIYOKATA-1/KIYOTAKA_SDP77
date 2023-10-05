@@ -19,10 +19,10 @@ public class Main {
             switch (choice) {
                 case 1:
                     System.out.println("Выберите товар для добавления в корзину:");
-                    System.out.println("1. Штаны - 20,000tg");
-                    System.out.println("2. Худи - 25,990tg");
-                    System.out.println("3. Пальто - 86,990tg");
-                    System.out.println("4. Куртка - 119,990tg");
+                    System.out.println("1. Штаны - 41.79USD");
+                    System.out.println("2. Худи - 54.31USD");
+                    System.out.println("3. Пальто - 181.78USD");
+                    System.out.println("4. Куртка - 250.73USD");
                     System.out.println("5. Назад");
                     int productChoice = scanner.nextInt();
                     switch (productChoice) {
