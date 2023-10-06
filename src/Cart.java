@@ -13,9 +13,10 @@ public class Cart {
 
     public double calculateTotal() {
         return products.stream().mapToDouble(Product::getPrice).sum();
-    }
+    } //Эта часть создает поток данных потом происходит преобразование этого потока
 
     public void clearCart() {
+
         products.clear();
     }
 
